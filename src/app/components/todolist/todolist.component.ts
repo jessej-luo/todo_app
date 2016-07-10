@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ToDoStore} from 'app/services/todostore.service'
 @Component({
     selector: 'todo-list',
     templateUrl: 'todolist.component.html',
@@ -8,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 
 export class ToDoList implements OnInit {
     newItem: "New Item";
-    constructor() { }
+    todos: any;
 
-    ngOnInit() { }
+    constructor(
+        private todoStore: ToDoStore 
+    ) { }
+
+    getTodos() {
+        return this.todoStore.getTodos();
+    }
+
+    ngOnInit() {
+        this.todos = this.getTodos();
+     }
 
 }

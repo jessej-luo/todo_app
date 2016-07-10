@@ -3,5 +3,10 @@
      <h1>To Do List</h1>
      <input [(ngModel)]="newItem" class="new-todo">
      <button (click)="addTodo()">Add</button>
+     <ul>
+         <li *ngFor="let todo of todos">
+            <span> {{todo}} </span>
+         </li>
+     </ul>
    </header>
 </section>
