@@ -11,7 +11,8 @@
     "start": "npm run server"
   },
   "contributors": [
-    "Jesse Luo"
+    "Rob Wormald <robwormald@gmail.com>",
+    "PatrickJS <github@gdi2290.com>"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -48,4 +49,12 @@
     "official angular 2 seed",
     "official angular2 seed"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular2-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular2-seed/issues"
+  },
+  "homepage": "https://github.com/angular/angular2-seed#readme"
 }
