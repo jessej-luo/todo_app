@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core';
-
+import { Todos } from 'app/services/mock-todo'
 @Injectable()
 export class ToDoStore {
-    todos: Array<String>;
+    todos: Array<string>;
 
     //Getter/Setter
     getTodos() {
-        return this.todos;
+        return Todos;
     }
 
     constructor() { }
 
-    addTodo(todo: String) {
+    addTodo(todo: string) {
         this.todos.push(todo);
     }
-
-
-
 }
