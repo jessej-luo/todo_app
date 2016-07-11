@@ -25,4 +25,8 @@ export class ToDoList implements OnInit {
         this.todos = this.getTodos();
      }
 
+     addTodo() {
+         
+     }
+
 }
