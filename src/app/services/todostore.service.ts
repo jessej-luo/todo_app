@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { Todos } from 'app/services/mock-todo'
+import { Todos } from 'app/services/mock-todo';
 
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ToDoStore {
-    private todoUrl = 'app/todos'
+    private todoUrl = 'http://localhost:8080/todos'
 
     constructor(
         private http: Http
@@ -18,12 +18,8 @@ export class ToDoStore {
     }
 
     //Getter/Setter
-    getTodos(): Promise<string> {
-        return this.http.get(this.todoUrl)
-                            .toPromise()
-                            .then(response =>
-                                response.json().data)
-                            .catch(this.handleError);
+    getTodos() {
+        return this.http.get(this.todoUrl);
     }
 
 }

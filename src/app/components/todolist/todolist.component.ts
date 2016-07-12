@@ -17,16 +17,11 @@ export class ToDoList implements OnInit {
     ) { }
 
     getTodos() {
-        return this.todoStore.getTodos().then(
-            todos => this.todos = todos);
+        console.log(this.todoStore.getTodos());
+        return this.todoStore.getTodos();
     }
 
     ngOnInit() {
         this.todos = this.getTodos();
      }
-
-     addTodo() {
-         
-     }
-
 }
