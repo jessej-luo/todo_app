@@ -18,8 +18,15 @@ export class ToDoStore {
     }
 
     //Getter/Setter
-    getTodos() {
-        return this.http.get(this.todoUrl);
-    }
+
+    getTodos(): Promise<string[]> {
+		return this.http.get(this.todoUrl)
+						.toPromise()
+						.then(function(response) {
+                            console.log(response.json());
+                            return response.json();
+                        })
+						.catch(this.handleError);		
+	}
 
 }

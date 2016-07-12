@@ -12,13 +12,14 @@ var appRouter = function(app) {
     });
 
     app.get("/todos", function(req, res) {
-        var todoList = [
+
+        let data = [
             "hi",
             "hello",
             "what's goign on"
         ];
 
-        return res.send(todoList);
+        return res.send(data);
     });
 
 }
