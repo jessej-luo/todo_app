@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ToDoStore {
-    private todoUrl = 'todos'
+    private todoUrl = 'app/todos'
 
     constructor(
         private http: Http
